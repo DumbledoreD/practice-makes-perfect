@@ -40,7 +40,7 @@ class FailedSolution:
 
             for i, include in enumerate(bit_mask, len(nums) - len(bit_mask)):
                 if include == "1":
-                    # Will create duplicate subsets as `nums` contain duplicates
+                    # ERROR: Will create duplicate subsets as `nums` contain duplicates
                     subset.append(nums[i])
 
             subsets.append(subset)
