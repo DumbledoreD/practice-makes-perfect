@@ -6,8 +6,8 @@ from .lc_90_subsets_ii import Solution
 @pytest.mark.parametrize(
     "nums, expected",
     [
-        pytest.param([1, 2, 2], [[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]),
-        pytest.param([0], [[], [0]]),
+        ([1, 2, 2], [[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]),
+        ([0], [[], [0]]),
     ],
 )
 def test_basic(nums, expected):

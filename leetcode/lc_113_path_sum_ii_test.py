@@ -7,9 +7,9 @@ from .lc_tree_utils import BinaryTreeBuilder
 @pytest.mark.parametrize(
     "tree_list, target_sum, expected",
     [
-        pytest.param([], 5, []),
-        pytest.param([1, 2, 3], 5, []),
-        pytest.param(
+        ([], 5, []),
+        ([1, 2, 3], 5, []),
+        (
             [5, 4, 8, 11, None, 13, 4, 7, 2, None, None, 5, 1],
             22,
             [[5, 4, 11, 2], [5, 8, 4, 5]],

@@ -30,7 +30,7 @@ def generate_piles():
 )
 @pytest.mark.parametrize(
     "piles, expected",
-    [(generate_piles(), True) for _ in range(20)],
+    [(generate_piles(), True) for _ in range(10)],
 )
 def test_stress(piles, expected):
     assert Solution().stoneGame(piles) == expected
