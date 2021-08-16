@@ -36,6 +36,7 @@ alias ga="git add -A && pc && gs"
 alias gu="git add -u"
 alias gc="git commit -m"
 alias gp="git push"
+alias gcnm="git commit -nm"
 
 alias pc="pre-commit run"
 
