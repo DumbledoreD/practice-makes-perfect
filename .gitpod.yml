@@ -3,7 +3,7 @@ tasks:
 
   # Ref: https://github.com/gitpod-io/gitpod/issues/1997
   - name: pre-commit workaround
-    command: echo "export PIP_USER=false" >> ~/.bashrc && . ~/.bashrc && exit
+    command: echo "export PIP_USER=false" >> ~/.bashrc && . ~/.bashrc && pre-commit && exit
 
   - name: personalize terminal
     command: cat .personal.bashrc >> ~/.bashrc && . ~/.bashrc && exit
