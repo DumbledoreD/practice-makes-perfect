@@ -1,9 +1,20 @@
 tasks:
-  - init: ./.init-workspace.sh
+  # Ref: pre-commit workaround https://github.com/gitpod-io/gitpod/issues/1997
+  - name: personal setup
+    init: |
+      python -m pip install --upgrade pip
+      python -m pip install --user pre-commit
+      pre-commit install
+      pre-commit autoupdate
+    command: |
+      cat .personal.bashrc >> ~/.bashrc
+      printf "\nexport PIP_USER=false" >> ~/.bashrc
+      . ~/.bashrc
+      gp sync-done ps
+      pre-commit
+      exit
 
-  # Ref: https://github.com/gitpod-io/gitpod/issues/1997
-  - name: pre-commit workaround
-    command: echo "export PIP_USER=false" >> ~/.bashrc && . ~/.bashrc && exit
-
-  - name: personalize terminal
-    command: cat .personal.bashrc >> ~/.bashrc && . ~/.bashrc && exit
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - streetsidesoftware.code-spell-checker
