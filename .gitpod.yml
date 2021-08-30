@@ -3,7 +3,7 @@ tasks:
   - name: personal setup
     init: |
       python -m pip install --upgrade pip
-      python -m pip install --user pre-commit
+      python -m pip install --user -r ./requirements.txt
       pre-commit install
       pre-commit autoupdate
     command: |
@@ -17,4 +17,5 @@ tasks:
 vscode:
   extensions:
     - eamodio.gitlens
+    - ms-python.python
     - streetsidesoftware.code-spell-checker

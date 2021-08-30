@@ -41,3 +41,5 @@ alias gp="git push"
 alias pc="pre-commit run"
 
 alias pt="pytest -xs"
+
+alias clc="python /workspace/practice-makes-perfect/leetcode/create_lc_file.py"
