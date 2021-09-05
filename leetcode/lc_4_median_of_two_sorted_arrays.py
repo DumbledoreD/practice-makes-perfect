@@ -1,3 +1,4 @@
+# Ref: https://www.youtube.com/watch?v=LPFhl65R7ww
 from typing import List
 
 
@@ -26,14 +27,14 @@ class Solution:
         div, mod = divmod(len(lesser) + len(greater), 2)
 
         if mod:
-            return self._get_i_th_elment_from_2_lists(lesser, greater, div)
+            return self._get_i_th_element_from_2_lists(lesser, greater, div)
 
         return (
-            self._get_i_th_elment_from_2_lists(lesser, greater, div - 1)
-            + self._get_i_th_elment_from_2_lists(lesser, greater, div)
+            self._get_i_th_element_from_2_lists(lesser, greater, div - 1)
+            + self._get_i_th_element_from_2_lists(lesser, greater, div)
         ) / 2
 
-    def _get_i_th_elment_from_2_lists(self, lesser, greater, i):
+    def _get_i_th_element_from_2_lists(self, lesser, greater, i):
         if i < len(lesser):
             return lesser[i]
 
@@ -53,12 +54,12 @@ class Solution:
             p_longer = left_length - p_shorter
 
             # [... shorter_l | shorter_r ...]
-            shorter_l = self._get_i_th_elment_from_1_list(shorter, p_shorter - 1)
-            shorter_r = self._get_i_th_elment_from_1_list(shorter, p_shorter)
+            shorter_l = self._get_i_th_element_from_1_list(shorter, p_shorter - 1)
+            shorter_r = self._get_i_th_element_from_1_list(shorter, p_shorter)
 
             # [... longer_l | longer_r ...]
-            longer_l = self._get_i_th_elment_from_1_list(longer, p_longer - 1)
-            longer_r = self._get_i_th_elment_from_1_list(longer, p_longer)
+            longer_l = self._get_i_th_element_from_1_list(longer, p_longer - 1)
+            longer_r = self._get_i_th_element_from_1_list(longer, p_longer)
 
             if shorter_l <= longer_r and longer_l <= shorter_r:
                 return (
@@ -75,7 +76,7 @@ class Solution:
 
         raise Exception("Failed binary search")
 
-    def _get_i_th_elment_from_1_list(self, nums, i):
+    def _get_i_th_element_from_1_list(self, nums, i):
         if i < 0:
             return -float("inf")
 
