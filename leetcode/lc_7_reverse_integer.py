@@ -1,3 +1,4 @@
+# Assume the environment does not allow you to store 64-bit integers.
 class Solution:
     _MAX = str(2 ** 31 - 1)
 
