@@ -16,10 +16,10 @@ class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         return [combo for combo in self._get_combo("", digits)] if digits else []
 
-    def _get_combo(self, sofar, rest):
+    def _get_combo(self, so_far, rest):
         if not rest:
-            yield sofar
+            yield so_far
 
         else:
             for c in self.mapping[rest[0]]:
-                yield from self._get_combo(sofar + c, rest[1:])
+                yield from self._get_combo(so_far + c, rest[1:])
