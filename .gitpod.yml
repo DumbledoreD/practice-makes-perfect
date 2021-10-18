@@ -18,4 +18,5 @@ vscode:
   extensions:
     - eamodio.gitlens
     - ms-python.python
+    - ms-toolsai.jupyter
     - streetsidesoftware.code-spell-checker
